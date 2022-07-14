@@ -3,12 +3,12 @@ export function sortObj(obj, mass) {
     let arr1 = []
     let arr2 = []
     for (let key in obj) {
-        if (key === mass[0] || key === mass[1]) {
+        if (mass.includes(key)) {
             arr1.push({ key: key, value: obj[key] })
         }
     }
     for (let key in obj) {
-        if (key != mass[0] && key != mass[1]) {
+        if (!mass.includes(key)) {
             arr2.push({ key: key, value: obj[key] })
         }
     }
